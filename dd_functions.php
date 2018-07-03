@@ -26,5 +26,9 @@ function get_image_url($post_id, $size){
 	return $image_url;
 }
 
-
+function get_acf_image_url($field_name, $size){
+	$field_id =  get_field($field_name);
+	$image_url = get_image_url($post_id, $size);
+	return $image_url;
+}
 ?>
